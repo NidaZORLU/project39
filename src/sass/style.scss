@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+//Mixins
+@mixin transitionEffect($par){
+  transition: $par all;
+  -webkit-transition: $par all;
+  -moz-transition: $par all;
+  -o-transition: $par all;
+}
+@mixin centerFlex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//color
+$bg-color-1 :rgba(0, 0, 0, 0.3);
+$bg-color-2: #fff;
+$bg-color-3: rebeccapurple;
+
+
+body{
+  @include centerFlex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.background{
+  background: url("https://images.unsplash.com/photo-1556745757-8d76bdb6984b") no-repeat center center/cover;
+  position: absolute;
+  top: -20px;
+  bottom: -20px;
+  right: -20px;
+  left: -20px;
+  z-index: -1;
+  filter: blur(20px);
+}
